@@ -1,0 +1,118 @@
+.w-week-calendar {
+  padding: 15px 40px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.w-week-calendar__year {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: black;
+}
+.w-week-calendar__weeks-list {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.w-week-calendar__weeks-list-item {
+  display: inline-block;
+  width: 35px;
+  margin:0 2px;
+  text-align: center;
+  font-size: 13px;
+  text-transform: capitalize;
+  color: grey;
+}
+.w-week-calendar__switcher {
+  cursor: pointer;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: grey;
+  transition: all ease 0.2s;
+}
+.w-week-calendar__switcher--left {
+  right: auto;
+  left: 0;
+}
+.w-week-calendar__switcher--right {
+
+}
+.w-week-calendar__switcher--left i {
+  transform: rotate(-180deg);
+}
+.w-week-calendar__slider-list {
+  position: relative;
+  margin: 0;
+  width: 810px;
+  padding: 0;
+  height: 38px;
+  list-style: none;
+  margin-left: -270px;
+  padding-bottom: 10px;
+}
+.w-week-calendar__slider-list li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 35px;
+  text-align: center;
+  line-height: 300px;
+}
+.w-week-calendar__slider {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 270px;
+  height: 78px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  margin-bottom: -50px;
+}
+.w-week-calendar__day {
+  color: black;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  line-height: 35px;
+  text-align: center;
+  padding: 0;
+  display: block;
+  margin: 0 2px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  transition: all ease 0.2s;
+}
+.w-week-calendar--hidden {
+  display: none;
+}
+.w-week-calendar__day--active {
+  background-color: #2980B9;
+  border-radius: 100px;
+  color: white;
+}
+.w-week-calendar__day--invalid {
+  color: lightgray;
+}

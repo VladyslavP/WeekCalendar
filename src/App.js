@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import WeekCalendar from './components/WeekCalendar';
 import './App.css';
 
 class App extends Component {
+  static handleDayChange(day) {
+    console.log(`Day changed: ${day}`);
+  }
+  static handleWeekChange({ startOfWeek, endOfWeek }) {
+    console.log(`Week changed: FROM -> ${startOfWeek} TO -> ${endOfWeek}`)
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <WeekCalendar
+          onWeekChange={App.handleWeekChange}
+          onDayChange={App.handleDayChange}/>
       </div>
     );
   }
