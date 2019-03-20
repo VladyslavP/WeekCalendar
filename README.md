@@ -1,4 +1,4 @@
-## Simple WeekCalendar component using React and hooks.
+## Simple WeekCalendar component using React with hooks.
 
 **To run the app you need to:**
 ```
